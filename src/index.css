@@ -9,7 +9,6 @@ body,
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
 }
-
 .app {
   display: flex;
   position: relative;
@@ -21,15 +20,19 @@ body,
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #e0e0e0;
+  background: #2aaa75;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #67ff9c;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #3bf17b;
+}
+
+.MuiDataGrid-cell{
+  outline:none !important;
 }

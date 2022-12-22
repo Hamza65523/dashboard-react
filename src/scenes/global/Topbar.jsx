@@ -14,17 +14,19 @@ const Topbar = () => {
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
+
+
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
       {/* SEARCH BAR */}
       <Box
         display="flex"
-        backgroundColor={colors.primary[400]}
+        backgroundColor={colors.green[300]}
         borderRadius="3px"
       >
-        <InputBase sx={{ ml: 2, flex: 1, }} color={'white'} placeholder="Search" />
+        <InputBase sx={{ ml: 2, flex: 1, }}  style={{color:'white'}} placeholder="Search" />
         <IconButton type="button" sx={{ p: 1 }}>
-          <SearchIcon />
+          <SearchIcon  style={{ color: 'white'}}/>
         </IconButton>
       </Box>
 
@@ -34,17 +36,17 @@ const Topbar = () => {
           {theme.palette.mode === "dark" ? (
             <DarkModeOutlinedIcon />
           ) : (
-            <LightModeOutlinedIcon />
+            <LightModeOutlinedIcon style={{color:`${colors.green[300]}`}}/>
           )}
         </IconButton>
         <IconButton>
-          <NotificationsOutlinedIcon />
+          <NotificationsOutlinedIcon style={{color:`${theme.palette.mode === "dark"?'':colors.green[300]}`}}/>
         </IconButton>
         <IconButton>
-          <SettingsOutlinedIcon />
+          <SettingsOutlinedIcon style={{color:`${theme.palette.mode === "dark"?'':colors.green[300]}`}}/>
         </IconButton>
         <IconButton>
-          <PersonOutlinedIcon />
+          <PersonOutlinedIcon style={{color:`${theme.palette.mode === "dark"?'':colors.green[300]}`}} />
         </IconButton>
       </Box>
     </Box>
